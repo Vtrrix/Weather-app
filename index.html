@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&family=Roboto:wght@300&family=Spartan&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/style.css">
+
+    <title>weather</title>
+</head>
+<body>
+
+    <div id="weather">
+        <div class="top">
+            <div class="search">
+                <input  type="search" name="location" placeholder="Location..." id="fetch_location" >
+                <button class="search_button" onclick="get_location()"><img src="./img/search.png" alt="search"></button>
+            </div>
+
+            <div id="icon">
+                -
+            </div>
+
+           
+            
+        </div>
+        <div class="bottom">
+            <div class="temperature">
+                
+            </div>
+
+            <div id="data">
+                <div id="locAndCoun">
+                    <div class="location">
+                        -
+                    </div>
+                    <div class="country">
+                        -
+                    </div>    
+                </div>
+                <div class="state">
+                    -
+                </div>
+            </div>
+            
+            
+            
+            
+        </div>
+        
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>

@@ -196,4 +196,11 @@ body {
   font-size: 1.2rem;
   font-weight: lighter;
 }
+
+@media only screen and (max-width: 450px) {
+  #weather {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
 /*# sourceMappingURL=style.css.map */

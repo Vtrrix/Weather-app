@@ -132,3 +132,9 @@ body{
     
    
 }
+
+@media only screen and (max-width: 450px) {
+    #weather{
+        transform: translateY(0);
+    }
+  }

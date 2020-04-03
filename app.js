@@ -3,6 +3,7 @@ const temp=document.querySelector(".temperature");
 const icon=document.querySelector("#icon");
 const state=document.querySelector(".state");
 const country=document.querySelector(".country");
+const body=document.getElementsByTagName("BODY")[0]; 
 
 
 
@@ -44,12 +45,18 @@ window.addEventListener('load' ,()=>{
                     if(icon_url.slice(-1)==='d'){
                         document.querySelector(".top").style.background="#f2f2f2";
                         document.querySelector(".bottom").style.background="#f2f2f2";
+                        if(window.innerWidth<=450){
+                            body.style.background="#f2f2f2";
+                        }
             
                     }       
                     
                     else{
                         document.querySelector(".top").style.background="#333333";
                         document.querySelector(".bottom").style.background="#333333";
+                        if(window.innerWidth<=450){
+                            body.style.background="#333333";
+                        }
                     }
                     
                     icon.innerHTML=`
@@ -105,11 +112,18 @@ fetch(apiUrl)
         if(icon_url.slice(-1)==='d'){
             document.querySelector(".top").style.background="#f2f2f2";
             document.querySelector(".bottom").style.background="#f2f2f2";
+            if(window.innerWidth<=450){
+                body.style.background="#f2f2f2";
+            }
 
-        }
+        }       
+        
         else{
             document.querySelector(".top").style.background="#333333";
             document.querySelector(".bottom").style.background="#333333";
+            if(window.innerWidth<=450){
+                body.style.background="#333333";
+            }
         }
         
         icon.innerHTML=`

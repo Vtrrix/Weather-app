@@ -15,6 +15,12 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 #weather {
@@ -120,6 +126,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 10px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -197,7 +204,77 @@ body {
   font-weight: lighter;
 }
 
+.arrow {
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  width: 10%;
+  padding: 50px;
+}
+
+.arrow img {
+  opacity: 0.7;
+  width: 100%;
+}
+
+.more {
+  height: 0;
+  width: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-shadow: 11px 10px 18px -5px rgba(0, 0, 0, 0.26);
+          box-shadow: 11px 10px 18px -5px rgba(0, 0, 0, 0.26);
+  -webkit-transform: translateY(11%);
+          transform: translateY(11%);
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  overflow-x: hidden;
+  font-family: 'Baloo Thambi 2', cursive;
+}
+
+.more .data {
+  min-width: 320px;
+  padding: 25px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.more .data .label {
+  font-size: 1.5rem;
+}
+
+.more .data .divider {
+  width: 4%;
+}
+
+.more .data .number {
+  font-family: 'Spartan', sans-serif;
+  font-size: 1.2rem;
+}
+
 @media only screen and (max-width: 450px) {
+  .arrow {
+    width: 40%;
+  }
   #weather {
     -webkit-transform: translateY(0);
             transform: translateY(0);
